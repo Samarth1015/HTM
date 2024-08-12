@@ -8,21 +8,22 @@ const SubjectCard = ({ imageurl, subject_name, logo }) => {
         height: "300px",
         cursor: "pointer",
       }}
-      onClick={() => console.log("Hola")}
     >
       <div>
-        <img
-          style={{
-            position: "absolute",
-            left: "25px",
-            top: "25px",
-            height: "50px",
-            width: "60px",
-          }}
-          src={imageurl}
-          className="card-item__chip"
-          alt="credit card chip"
-        ></img>
+        {imageurl ? (
+          <img
+            style={{
+              position: "absolute",
+              left: "25px",
+              top: "25px",
+              height: "50px",
+              width: "60px",
+            }}
+            src={imageurl}
+            className="card-item__chip"
+            alt="credit card chip"
+          ></img>
+        ) : null}
       </div>
       <div
         style={{
@@ -38,13 +39,12 @@ const SubjectCard = ({ imageurl, subject_name, logo }) => {
             fontFamily: "Fira Code",
             color: "white",
           }}
-          onClick={console.log("prova")}
         >
           <label style={{ marginLeft: "30px" }} className="text-6xl ">
             {subject_name}
           </label>
         </div>
-        <img src={logo}></img>
+        <img className="h-52" src={logo}></img>
       </div>
     </Card>
   );
@@ -54,10 +54,12 @@ const Section = ({ imageurl, subject_name, logo }) => {
     <div
       style={{
         height: "100vh",
+
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
       }}
+      className="mx min-w-2 "
     >
       <SubjectCard
         imageurl={imageurl}

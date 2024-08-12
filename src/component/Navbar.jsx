@@ -3,6 +3,7 @@ import { app } from "../context/firebaseConfig";
 import { useFirebase } from "../context/Firebase";
 import { useEffect, useState } from "react";
 import Profile from "./profile";
+import { Link } from "react-router-dom";
 
 let auth = getAuth(app);
 console.log("aut:h ");
@@ -22,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 fixed z-10">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +47,7 @@ export default function Navbar() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <Link to="/"> Home</Link>
               </li>
               <li>
                 <a>Explore</a>
@@ -56,14 +57,14 @@ export default function Navbar() {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">
+          <Link to="/" className="btn btn-ghost text-xl">
             Class <span className="text-red-300">Buddy</span>
-          </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <Link to="/"> Home</Link>
             </li>
             <li>
               <a>Explore</a>
