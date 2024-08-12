@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="navbar bg-base-100 fixed z-10">
+      <div className="navbar bg-base-100 fixed z-10 top-0">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,7 +50,7 @@ export default function Navbar() {
                 <Link to="/"> Home</Link>
               </li>
               <li>
-                <a>Explore</a>
+                <Link to="/explore">Explore</Link>
               </li>
               <li>
                 <a>Discuss</a>
@@ -67,7 +67,7 @@ export default function Navbar() {
               <Link to="/"> Home</Link>
             </li>
             <li>
-              <a>Explore</a>
+              <Link to="/explore">Explore</Link>
             </li>
             <li>
               <a>Discuss</a>

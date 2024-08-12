@@ -11,6 +11,7 @@ import {
 import { useFirebase } from "./context/Firebase";
 import Neetpage from "./NeetPage/neetPage";
 import Jeepage from "./jeePage/jeePage";
+import News from "./newspage/newsPage";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,14 +25,14 @@ const router = createBrowserRouter([
     path: "/jee",
     element: <Jeepage></Jeepage>,
   },
+  {
+    path: "/explore",
+    element: <News></News>,
+  },
 ]);
 
 function App() {
-  return (
-    <div className="overflow-x-auto">
-      <RouterProvider router={router} />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
