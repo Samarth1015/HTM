@@ -12,6 +12,7 @@ import { useFirebase } from "./context/Firebase";
 import Neetpage from "./NeetPage/neetPage";
 import Jeepage from "./jeePage/jeePage";
 import News from "./newspage/newsPage";
+import Footer from "./component/footer";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,7 +33,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

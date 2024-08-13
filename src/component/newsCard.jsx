@@ -2,7 +2,7 @@ export default function NewsCard({ data }) {
   console.log(data);
   return (
     <a href={data.url}>
-      <div className="h-screen">
+      <div>
         <div
           className="card card-compact bg-base-100 w-96 shadow-sm
          shadow-cyan-100 border-collapse"
